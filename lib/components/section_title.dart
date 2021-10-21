@@ -4,14 +4,14 @@ import '../constants.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
-    Key key,
+    Key? key,
     this.title,
     this.subTitle,
     this.color,
   }) : super(key: key);
 
-  final String title, subTitle;
-  final Color color;
+  final String? title, subTitle;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -38,15 +38,15 @@ class SectionTitle extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                subTitle,
+                subTitle!,
                 style:
                     TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
               ),
               Text(
-                title,
+                title!,
                 style: Theme.of(context)
                     .textTheme
-                    .headline2
+                    .headline2!
                     .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
               )
             ],

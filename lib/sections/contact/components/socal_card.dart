@@ -4,16 +4,16 @@ import '../../../constants.dart';
 
 class SocalCard extends StatefulWidget {
   const SocalCard({
-    Key key,
+    Key? key,
     this.iconSrc,
     this.name,
     this.color,
     this.press,
   }) : super(key: key);
 
-  final String iconSrc, name;
-  final Color color;
-  final Function press;
+  final String? iconSrc, name;
+  final Color? color;
+  final void Function()? press;
 
   @override
   _SocalCardState createState() => _SocalCardState();
@@ -45,12 +45,12 @@ class _SocalCardState extends State<SocalCard> {
           child: Row(
             children: [
               Image.asset(
-                widget.iconSrc,
+                widget.iconSrc!,
                 height: 80,
                 width: 80,
               ),
               SizedBox(width: kDefaultPadding),
-              Text(widget.name),
+              Text(widget.name!),
             ],
           ),
         ),

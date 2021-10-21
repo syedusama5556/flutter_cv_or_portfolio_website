@@ -5,11 +5,11 @@ import '../../../constants.dart';
 
 class FeedbackCard extends StatefulWidget {
   const FeedbackCard({
-    Key key,
+    Key? key,
     this.index,
   }) : super(key: key);
 
-  final int index;
+  final int? index;
 
   @override
   _FeedbackCardState createState() => _FeedbackCardState();
@@ -35,7 +35,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         height: 350,
         width: 350,
         decoration: BoxDecoration(
-          color: feedbacks[widget.index].color,
+          color: feedbacks[widget.index!].color,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultCardShadow],
         ),
@@ -52,13 +52,13 @@ class _FeedbackCardState extends State<FeedbackCard> {
                   border: Border.all(color: Colors.white, width: 10),
                   boxShadow: [if (!isHover) kDefaultCardShadow],
                   image: DecorationImage(
-                    image: AssetImage(feedbacks[widget.index].userPic),
+                    image: AssetImage(feedbacks[widget.index!].userPic!),
                   ),
                 ),
               ),
             ),
             Text(
-              feedbacks[widget.index].review,
+              feedbacks[widget.index!].review!,
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 18,

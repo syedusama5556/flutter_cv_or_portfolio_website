@@ -4,17 +4,20 @@ import '../constants.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
-    Key key,
+    Key? key,
     this.imageSrc,
     this.text,
     this.press,
   }) : super(key: key);
 
-  final String imageSrc, text;
-  final Function press;
+  final String? imageSrc, text;
+  final void Function()? press;
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return FlatButton(
       padding: EdgeInsets.symmetric(
         vertical: kDefaultPadding,
@@ -25,11 +28,13 @@ class DefaultButton extends StatelessWidget {
       onPressed: press,
       child: Row(
         children: [
-          Image.asset(imageSrc, height: 40),
+          Image.asset(imageSrc!, height: 40),
           SizedBox(width: kDefaultPadding),
-          Text(text),
+          Text(text!),
         ],
       ),
     );
   }
+
+
 }

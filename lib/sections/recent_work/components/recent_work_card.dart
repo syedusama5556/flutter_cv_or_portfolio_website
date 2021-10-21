@@ -6,13 +6,13 @@ import '../../../constants.dart';
 class RecentWorkCard extends StatefulWidget {
   // just press "Command + ."
   const RecentWorkCard({
-    Key key,
+    Key? key,
     this.index,
     this.press,
   }) : super(key: key);
 
-  final int index;
-  final Function press;
+  final int? index;
+  final void Function()? press;
 
   @override
   _RecentWorkCardState createState() => _RecentWorkCardState();
@@ -40,7 +40,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         ),
         child: Row(
           children: [
-            Image.asset(recentWorks[widget.index].image),
+            Image.asset(recentWorks[widget.index!].image!),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -48,13 +48,13 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(recentWorks[widget.index].category.toUpperCase()),
+                    Text(recentWorks[widget.index!].category!.toUpperCase()),
                     SizedBox(height: kDefaultPadding / 2),
                     Text(
-                      recentWorks[widget.index].title,
+                      recentWorks[widget.index!].title!,
                       style: Theme.of(context)
                           .textTheme
-                          .headline5
+                          .headline5!
                           .copyWith(height: 1.5),
                     ),
                     SizedBox(height: kDefaultPadding),

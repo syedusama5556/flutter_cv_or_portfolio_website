@@ -6,11 +6,11 @@ import '../../../constants.dart';
 
 class GlassContent extends StatelessWidget {
   const GlassContent({
-    Key key,
+    Key? key,
     @required this.size,
   }) : super(key: key);
 
-  final Size size;
+  final Size? size;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class GlassContent extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
           constraints:
-              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
+              BoxConstraints(maxWidth: 1110, maxHeight: size!.height * 0.7),
           width: double.infinity,
           color: Colors.white.withOpacity(0),
           child: Column(
@@ -32,7 +32,7 @@ class GlassContent extends StatelessWidget {
                 "Hello There!",
                 style: Theme.of(context)
                     .textTheme
-                    .headline5
+                    .headline5!
                     .copyWith(color: Colors.white),
               ),
               Text(
@@ -48,7 +48,7 @@ class GlassContent extends StatelessWidget {
                 "Creative Design Director",
                 style: Theme.of(context)
                     .textTheme
-                    .headline5
+                    .headline5!
                     .copyWith(color: Colors.white),
               )
             ],

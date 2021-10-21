@@ -4,11 +4,11 @@ import '../../../constants.dart';
 
 class ExperienceCard extends StatelessWidget {
   const ExperienceCard({
-    Key key,
+    Key? key,
     this.numOfExp,
   }) : super(key: key);
 
-  final String numOfExp;
+  final String? numOfExp;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class ExperienceCard extends StatelessWidget {
             Stack(
               children: [
                 Text(
-                  numOfExp,
+                  numOfExp!,
                   style: TextStyle(
                     fontSize: 100,
                     fontWeight: FontWeight.bold,
@@ -57,7 +57,7 @@ class ExperienceCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  numOfExp,
+                  numOfExp!,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 100,
