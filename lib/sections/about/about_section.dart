@@ -45,9 +45,7 @@ class AboutSection extends StatelessWidget {
                 imageSrc: MyImageData.aboutpagesection_download,
                 text: MyData.downloadcv,
                 press: () {
-                  if (Platform.isFuchsia) {
                     launchURL(MyData.mycvurl);
-                  }
                 },
               ),
             ],
