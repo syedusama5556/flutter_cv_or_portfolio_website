@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/default_button.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/components/default_button.dart';
+import 'package:flutter_cv_or_portfolio_website/components/section_title.dart';
+import 'package:flutter_cv_or_portfolio_website/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import 'components/socal_card.dart';
 
@@ -16,15 +17,15 @@ class ContactSection extends StatelessWidget {
         color: Color(0xFFE8F0F9),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/images/bg_img_2.png"),
+          image: AssetImage(MyImageData.contactsection_bgimag),
         ),
       ),
       child: Column(
         children: [
           SizedBox(height: kDefaultPadding * 2.5),
           SectionTitle(
-            title: "Contact Me",
-            subTitle: "For Project inquiry and information",
+            title: MyData.contactme,
+            subTitle: MyData.forproject,
             color: Color(0xFF07E24A),
           ),
           ContactBox()
@@ -59,19 +60,19 @@ class ContactBox extends StatelessWidget {
             children: [
               SocalCard(
                 color: Color(0xFFD9FFFC),
-                iconSrc: "assets/images/skype.png",
+                iconSrc: MyImageData.contactsection_skype,
                 name: 'TheFlutterWay',
                 press: () {},
               ),
               SocalCard(
                 color: Color(0xFFE4FFC7),
-                iconSrc: "assets/images/whatsapp.png",
+                iconSrc: MyImageData.contactsection_whatsapp,
                 name: 'TheFlutterWay',
                 press: () {},
               ),
               SocalCard(
                 color: Color(0xFFE8F0F9),
-                iconSrc: "assets/images/messanger.png",
+                iconSrc: MyImageData.contactsection_messanger,
                 name: 'TheFlutterWay',
                 press: () {},
               ),
@@ -152,8 +153,8 @@ class ContactForm extends StatelessWidget {
           Center(
             child: FittedBox(
               child: DefaultButton(
-                imageSrc: "assets/images/contact_icon.png",
-                text: "Contact Me!",
+                imageSrc: MyImageData.contactsection_contacticon,
+                text: MyData.contactme,
                 press: () {},
               ),
             ),

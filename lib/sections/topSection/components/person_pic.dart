@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 class PersonPic extends StatelessWidget {
   const PersonPic({
@@ -9,7 +10,7 @@ class PersonPic extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(maxWidth: 639, maxHeight: 860),
-      child: Image.asset("assets/images/person.png"),
+      child: Image.asset(MyImageData.topsection_person),
     );
   }
 }

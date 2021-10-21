@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import '../../../constants.dart';
 
@@ -29,14 +30,14 @@ class GlassContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Hello There!",
+                MyData.hellotext,
                 style: Theme.of(context)
                     .textTheme
                     .headline5!
                     .copyWith(color: Colors.white),
               ),
               Text(
-                "Robbie \nRutherford",
+                MyData.name,
                 style: TextStyle(
                   fontSize: 100,
                   fontWeight: FontWeight.bold,
@@ -45,7 +46,7 @@ class GlassContent extends StatelessWidget {
                 ),
               ),
               Text(
-                "Creative Design Director",
+                MyData.designation,
                 style: Theme.of(context)
                     .textTheme
                     .headline5!

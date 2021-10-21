@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const kTextColor = Color(0xFF707070);
 const kTextLightColor = Color(0xFF555555);
@@ -23,6 +24,14 @@ final kDefaultInputDecorationTheme = InputDecorationTheme(
   enabledBorder: kDefaultOutlineInputBorder,
   focusedBorder: kDefaultOutlineInputBorder,
 );
+
+launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 
 final kDefaultOutlineInputBorder = OutlineInputBorder(
   // Maybe flutter team need to fix it on web

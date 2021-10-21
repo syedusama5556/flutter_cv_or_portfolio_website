@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="web_app"
+        android:label="flutter_cv_or_portfolio_website"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

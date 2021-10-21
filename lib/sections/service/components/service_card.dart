@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/models/Service.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
+import 'package:flutter_cv_or_portfolio_website/models/Service.dart';
 
 import '../../../constants.dart';
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/models/RecentWork.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
+import 'package:flutter_cv_or_portfolio_website/models/RecentWork.dart';
 
 import '../../../constants.dart';
 
@@ -8,11 +9,9 @@ class RecentWorkCard extends StatefulWidget {
   const RecentWorkCard({
     Key? key,
     this.index,
-    this.press,
   }) : super(key: key);
 
   final int? index;
-  final void Function()? press;
 
   @override
   _RecentWorkCardState createState() => _RecentWorkCardState();
@@ -23,7 +22,9 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: widget.press,
+      onTap: (){
+        launchURL(recentWorks[widget.index!].url!);
+      },
       onHover: (value) {
         setState(() {
           isHover = value;
@@ -31,7 +32,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 200),
-        height: 320,
+        height: 160,
         width: 540,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -58,9 +59,14 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                           .copyWith(height: 1.5),
                     ),
                     SizedBox(height: kDefaultPadding),
-                    Text(
-                      "View Details",
-                      style: TextStyle(decoration: TextDecoration.underline),
+                    GestureDetector(
+                      onTap:() {
+                        launchURL(recentWorks[widget.index!].url!);
+                      },
+                      child: Text(
+                        "View Details",
+                        style: TextStyle(decoration: TextDecoration.underline),
+                      ),
                     )
                   ],
                 ),

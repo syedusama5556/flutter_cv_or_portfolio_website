@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import '../../../constants.dart';
 
@@ -68,7 +69,7 @@ class ExperienceCard extends StatelessWidget {
             ),
             SizedBox(height: kDefaultPadding / 2),
             Text(
-              "Years of Experience",
+              MyData.yearsofexperience,
               style: TextStyle(
                 color: Color(0xFFA600FF),
               ),

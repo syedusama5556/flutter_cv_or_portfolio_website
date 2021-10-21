@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/default_button.dart';
-import 'package:web_app/components/my_outline_button.dart';
-import 'package:web_app/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/components/default_button.dart';
+import 'package:flutter_cv_or_portfolio_website/components/my_outline_button.dart';
+import 'package:flutter_cv_or_portfolio_website/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import 'components/about_section_text.dart';
 import 'components/about_text_with_sign.dart';
@@ -22,14 +23,14 @@ class AboutSection extends StatelessWidget {
               Expanded(
                 child: AboutSectionText(
                   text:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                      MyData.abouttext1,
                 ),
               ),
-              ExperienceCard(numOfExp: "08"),
+              ExperienceCard(numOfExp: MyData.numOfExpyear),
               Expanded(
                 child: AboutSectionText(
                   text:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  MyData.abouttext2,
                 ),
               ),
             ],
@@ -39,14 +40,14 @@ class AboutSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyOutlineButton(
-                imageSrc: "assets/images/hand.png",
-                text: "Hire Me!",
+                imageSrc: MyImageData.hireMeCard_hand,
+                text: MyData.hiremetext,
                 press: () {},
               ),
               SizedBox(width: kDefaultPadding * 1.5),
               DefaultButton(
-                imageSrc: "assets/images/download.png",
-                text: "Download CV",
+                imageSrc: MyImageData.aboutpagesection_download,
+                text: MyData.downloadcv,
                 press: () {},
               ),
             ],

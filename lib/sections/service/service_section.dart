@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/Service.dart';
+import 'package:flutter_cv_or_portfolio_website/components/section_title.dart';
+import 'package:flutter_cv_or_portfolio_website/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
+import 'package:flutter_cv_or_portfolio_website/models/Service.dart';
 
 import 'components/service_card.dart';
 
@@ -15,13 +16,15 @@ class ServiceSection extends StatelessWidget {
         children: [
           SectionTitle(
             color: Color(0xFFFF0000),
-            title: "Service Offerings",
-            subTitle: "My Strong Arenas",
+            title: MyData.serviceoffring,
+            subTitle: MyData.mystrong,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: List.generate(
-                services.length, (index) => ServiceCard(index: index)),
+          SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(
+                  services.length, (index) => ServiceCard(index: index)),
+            ),
           )
         ],
       ),

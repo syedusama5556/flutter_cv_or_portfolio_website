@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import '../constants.dart';
 import 'default_button.dart';
@@ -21,7 +22,7 @@ class HireMeCard extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            "assets/images/email.png",
+            MyImageData.hireMeCard_email,
             height: 80,
             width: 80,
           ),
@@ -37,20 +38,20 @@ class HireMeCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Starting New Project?",
+                  MyData.startingproject,
                   style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: kDefaultPadding / 2),
                 Text(
-                  "Get an estimate for the new project",
+                  MyData.getextimate,
                   style: TextStyle(fontWeight: FontWeight.w200),
                 )
               ],
             ),
           ),
           DefaultButton(
-            text: "Hire Me!",
-            imageSrc: "assets/images/hand.png",
+            text:MyData.hiremetext,
+            imageSrc: MyImageData.hireMeCard_hand,
             press: () {},
           )
         ],

@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/constants.dart';
+import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
 import 'components/logo_blur_box.dart';
 import 'components/menu.dart';
@@ -18,7 +19,7 @@ class TopSection extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/images/background.png"),
+          image: AssetImage(MyImageData.topsection_bgimag),
         ),
       ),
       child: Container(
