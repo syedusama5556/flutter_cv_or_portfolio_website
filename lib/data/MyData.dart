@@ -17,6 +17,7 @@ class MyData {
 
   //topsection page
   static String title = "CV / Portfolio";
+  static String mycvurl = "http://www.africau.edu/images/default/sample.pdf";
   static String name = "Syed \nUsama Ahmad";
   static String hellotext = "Hello There!";
   static String designation = "Project Manger";

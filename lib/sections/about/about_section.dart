@@ -1,6 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_cv_or_portfolio_website/components/default_button.dart';
-import 'package:flutter_cv_or_portfolio_website/components/my_outline_button.dart';
 import 'package:flutter_cv_or_portfolio_website/constants.dart';
 import 'package:flutter_cv_or_portfolio_website/data/MyData.dart';
 
@@ -23,7 +24,7 @@ class AboutSection extends StatelessWidget {
               Expanded(
                 child: AboutSectionText(
                   text:
-                      MyData.abouttext1,
+                  MyData.abouttext1,
                 ),
               ),
               ExperienceCard(numOfExp: MyData.numOfExpyear),
@@ -37,18 +38,17 @@ class AboutSection extends StatelessWidget {
           ),
           SizedBox(height: kDefaultPadding * 3),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              MyOutlineButton(
-                imageSrc: MyImageData.hireMeCard_hand,
-                text: MyData.hiremetext,
-                press: () {},
-              ),
               SizedBox(width: kDefaultPadding * 1.5),
               DefaultButton(
                 imageSrc: MyImageData.aboutpagesection_download,
                 text: MyData.downloadcv,
-                press: () {},
+                press: () {
+                  if (Platform.isFuchsia) {
+                    launchURL(MyData.mycvurl);
+                  }
+                },
               ),
             ],
           ),
